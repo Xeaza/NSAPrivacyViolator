@@ -36,5 +36,21 @@
     NSLog(@"Failed: %@", error.localizedDescription);
 }
 
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+{
+    for (CLLocation *location in locations) {
+        if (location.verticalAccuracy < 1000 && location.horizontalAccuracy < 1000) {
+            self.textField.text = @"Location Found. Reverse Geocoding...";
+            [self reverseGeocode:location];
+            NSLog(@"The locations: %@", location);
+            [self.locationManager stopUpdatingLocation];
+            break;
+        }
+    }
+}
+
+- (void)reverseGeocode: (CLLocation *)location {
+
+}
 
 @end
