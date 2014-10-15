@@ -7,8 +7,12 @@
 //
 
 #import "ViewController.h"
+#import <CoreLocation/CoreLocation.h>
 
-@interface ViewController ()
+@interface ViewController () <CLLocationManagerDelegate>
+
+@property CLLocationManager *locationManager;
+@property (weak, nonatomic) IBOutlet UITextView *textField;
 
 @end
 
@@ -16,12 +20,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.locationManager = [[CLLocationManager alloc] init];
+    [self.locationManager requestWhenInUseAuthorization];
+    self.locationManager.delegate = self;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)startViolatingPrivacy:(id)sender
+{
+    [self.locationManager startUpdatingLocation];
+    self.textField.text = @"Locating You...";
 }
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+{
+    NSLog(@"Failed: %@", error.localizedDescription);
+}
+
 
 @end

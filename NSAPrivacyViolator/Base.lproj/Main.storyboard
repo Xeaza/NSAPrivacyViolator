@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="KVk-f1-jL3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Dear Citizen-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +15,77 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6f5-H2-yzk">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wX8-yG-YXS">
+                                <rect key="frame" x="471" y="562" width="113" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="113" id="OEs-Ir-EWC"/>
+                                </constraints>
+                                <state key="normal" title="What!?... No!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startViolatingPrivacy:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="g7O-gf-bT0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t1F-e0-F55">
+                                <rect key="frame" x="16" y="562" width="132" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="132" id="TGL-FF-0kt"/>
+                                </constraints>
+                                <state key="normal" title="Ummm... Ok! ">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startViolatingPrivacy:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="jE1-cM-G69"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6f5-H2-yzk" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="05m-Ej-mbl"/>
+                            <constraint firstItem="wX8-yG-YXS" firstAttribute="leading" secondItem="6f5-H2-yzk" secondAttribute="trailing" constant="-129" id="B11-Dn-0X0"/>
+                            <constraint firstItem="6f5-H2-yzk" firstAttribute="leading" secondItem="t1F-e0-F55" secondAttribute="trailing" constant="-148" id="C3d-8S-U8c"/>
+                            <constraint firstItem="t1F-e0-F55" firstAttribute="top" secondItem="6f5-H2-yzk" secondAttribute="bottom" constant="-38" id="CeP-C5-JMa"/>
+                            <constraint firstItem="wX8-yG-YXS" firstAttribute="top" secondItem="6f5-H2-yzk" secondAttribute="bottom" constant="-38" id="Vlj-lL-An4"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="6f5-H2-yzk" secondAttribute="bottom" id="mTB-P1-q5A"/>
+                            <constraint firstAttribute="trailing" secondItem="6f5-H2-yzk" secondAttribute="trailing" id="ss3-TZ-N9X"/>
+                            <constraint firstItem="6f5-H2-yzk" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="ttp-Lt-HZP"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Dear Citizen" id="kyu-XD-nUd"/>
+                    <connections>
+                        <outlet property="textField" destination="6f5-H2-yzk" id="LWz-TR-T4D"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1152" y="1050"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0Zb-y7-KEB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KVk-f1-jL3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xUj-OF-RwM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="2ii-K4-lPw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k6x-NF-6rK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="440" y="1050"/>
         </scene>
     </scenes>
 </document>
