@@ -18,7 +18,8 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     self.locationManager = [[CLLocationManager alloc] init];
     [self.locationManager requestWhenInUseAuthorization];
@@ -38,8 +39,10 @@
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
-    for (CLLocation *location in locations) {
-        if (location.verticalAccuracy < 1000 && location.horizontalAccuracy < 1000) {
+    for (CLLocation *location in locations)
+    {
+        if (location.verticalAccuracy < 1000 && location.horizontalAccuracy < 1000)
+        {
             self.textField.text = @"Location Found. Reverse Geocoding...";
             [self reverseGeocode:location];
             NSLog(@"The locations: %@", location);
@@ -49,8 +52,24 @@
     }
 }
 
-- (void)reverseGeocode: (CLLocation *)location {
+- (void)reverseGeocode: (CLLocation *)location
+{
+    CLGeocoder *geocoder = [CLGeocoder new];
 
+    [geocoder reverseGeocodeLocation:location completionHandler:^(NSArray *placemarks, NSError *error) {
+        CLPlacemark *placemark = placemarks.firstObject;
+        NSString *address = [NSString stringWithFormat:@"%@ %@ \n%@",
+                             placemark.subThoroughfare,
+                             placemark.thoroughfare,
+                             placemark.locality];
+        self.textField.text = [NSString stringWithFormat:@"Found you: %@", address];
+        [self findJailNear:placemark.location];
+    }];
+}
+
+- (void)findJailNear: (CLLocation *)location
+{
+    
 }
 
 @end
