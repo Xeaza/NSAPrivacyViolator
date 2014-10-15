@@ -15,6 +15,7 @@
 		34DBA67219EED2F800981754 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34DBA67019EED2F800981754 /* LaunchScreen.xib */; };
 		34DBA67E19EED2F900981754 /* NSAPrivacyViolatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 34DBA67D19EED2F900981754 /* NSAPrivacyViolatorTests.m */; };
 		34DBA68819EED6B100981754 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34DBA68719EED6B100981754 /* CoreLocation.framework */; };
+		34DBA68A19EEEB4800981754 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34DBA68919EEEB4800981754 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		34DBA67C19EED2F900981754 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34DBA67D19EED2F900981754 /* NSAPrivacyViolatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSAPrivacyViolatorTests.m; sourceTree = "<group>"; };
 		34DBA68719EED6B100981754 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		34DBA68919EEEB4800981754 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34DBA68A19EEEB4800981754 /* MapKit.framework in Frameworks */,
 				34DBA68819EED6B100981754 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -66,6 +69,7 @@
 		34DBA65519EED2F800981754 = {
 			isa = PBXGroup;
 			children = (
+				34DBA68919EEEB4800981754 /* MapKit.framework */,
 				34DBA66019EED2F800981754 /* NSAPrivacyViolator */,
 				34DBA67A19EED2F900981754 /* NSAPrivacyViolatorTests */,
 				34DBA65F19EED2F800981754 /* Products */,
